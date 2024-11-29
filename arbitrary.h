@@ -12,6 +12,7 @@
 
 /*--- custom function defs ---*/
 int main(int argc, char **argv);
+char func-handler(char *func-name);
 void add(int num, int num3);
 
 #endif
