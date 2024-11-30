@@ -23,9 +23,8 @@ int main(int argc, char **argv) {
 			 */
 			int m;
 			for (m = 0; m < argc; m++) {
-				printf("%s\n", argv[m]);
-				if (argv[m] == "add") {
-					printf("yes\n");
+				if strcmp(argv[m], "add" == 0 ) {
+					return;
 				}
 				else {
 					printf("No\n");
