@@ -19,12 +19,7 @@ int main(int argc, char **argv) {
 			printf("no arguments passed\n");
 			break;
 		}
-		else {
-			/* iterate through argument count 
-			 * and call resp. math functions.
-			 */
-			for (m = 1; m < argc; m++) {
-				if (strcmp(argv[m], "add") == 0) {
+		else if (strcmp(argv[m], "add") == 0) {
 					printf("yup! func-name is %s.\n", argv[m]);
 					/* check arguments to add func have been
 					 * passed to the cmd
