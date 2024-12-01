@@ -21,13 +21,24 @@ int main(int argc, char **argv) {
 			/* iterate through argument count 
 			 * and call resp. math functions.
 			 */
-			int m;
-			for (m = 0; m < argc; m++) {
-				if strcmp(argv[m], "add" == 0 ) {
-					return;
+			int m, res;
+			for (m = 1; m < argc; m++) {
+				if (strcmp(argv[m], "add") == 0) {
+					printf("yup! func-name is %s.\n", argv[m]);
+					/* check arguments to add func have been
+					 * passed to the cmd
+					 */
+					if (argv[m+1] != NULL && argv[m+2] != NULL) {
+						res = arbitrary_add((int)argv[m+1], (int)argv[m+2]);
+						return (res);
+						}
+						else {
+							printf("usage: add num1 num2.\n");
+						}
+
 				}
 				else {
-					printf("No\n");
+					return(0);
 				}
 			}
 			break;
