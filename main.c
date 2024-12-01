@@ -29,13 +29,12 @@ int main(int argc, char **argv) {
 					 * passed to the cmd
 					 */
 					if (argv[m+1] != NULL && argv[m+2] != NULL) {
-						res = arbitrary_add((int)argv[m+1], (int)argv[m+2]);
+						res = arbitrary_add((long)argv[m+1], (long)argv[m+2]);
 						return (res);
-						}
-						else {
-							printf("usage: add num1 num2.\n");
-						}
-
+					}
+					else {
+						printf("usage: add num1 num2.\n");
+					}
 				}
 				else {
 					return(0);
