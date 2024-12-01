@@ -11,6 +11,8 @@
  */
 
 int main(int argc, char **argv) {
+	int m, res;
+
 	while (TRUE) {
 		/* if program name is supplied. */
 		if (argc <= 1) {
@@ -21,7 +23,6 @@ int main(int argc, char **argv) {
 			/* iterate through argument count 
 			 * and call resp. math functions.
 			 */
-			int m, res;
 			for (m = 1; m < argc; m++) {
 				if (strcmp(argv[m], "add") == 0) {
 					printf("yup! func-name is %s.\n", argv[m]);
@@ -29,8 +30,8 @@ int main(int argc, char **argv) {
 					 * passed to the cmd
 					 */
 					if (argv[m+1] != NULL && argv[m+2] != NULL) {
-						res = arbitrary_add((long)argv[m+1], (long)argv[m+2]);
-						return (res);
+						res = arbitrary_add(atoi(argv[m+1]), atoi(argv[m+2]));
+						printf("sum: %d.\n", res);
 					}
 					else {
 						printf("usage: add num1 num2.\n");
