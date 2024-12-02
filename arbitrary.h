@@ -12,7 +12,7 @@
 
 /*--- custom function defs ---*/
 int main(int argc, char **argv);
-char func-handler(char *func-name);
-void add(int num, int num3);
+char func_handler(char func_name);
+int arbitrary_add(int num, int num3);
 
 #endif
