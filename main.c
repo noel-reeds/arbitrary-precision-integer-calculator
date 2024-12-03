@@ -32,9 +32,10 @@ int main(int argc, char **argv) {
 				printf("usage: add num1 num2.\n");
 			}
 		}
-		else {
-			/* add other operations */
-			return(0);
+		else if (strcmp(argv[m], "sub") == 0) {
+			res = arbitrary_sub(atoi(argv[m+1]), atoi(argv[m+2]));
+			printf("sub: %d\n", res);
+			break;
 		}
 	}	
 	return (0);
