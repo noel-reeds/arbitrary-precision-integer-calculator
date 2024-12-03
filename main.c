@@ -15,13 +15,12 @@ int main(int argc, char **argv) {
 
 	while (TRUE) {
 		/* if program name is supplied. */
-		if (argc <= 1) {
-			printf("no arguments passed\n");
+		if (argc <= 3) {
+			printf("Usage: add num1 num2.\n");
 			break;
 		}
 		m = 1;
 		if (strcmp(argv[m], "add") == 0) {
-			printf("func-name is %s.\n", argv[m]);
 			/* check arguments to add func have been
 			* passed to the cmd */
 			if (argv[m+1] != NULL && argv[m+2] != NULL) {
