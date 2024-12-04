@@ -8,8 +8,8 @@
  *
  * Return: returns the result of subtraction
  */
-int arbitrary_sub(int num, int num3) {
-	int res;
+uint64_t arbitrary_sub(uint64_t num, uint64_t num3) {
+	uint64_t res;
 
 	res = num - num3;
 	return res;
