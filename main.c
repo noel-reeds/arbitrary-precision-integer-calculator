@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
 	while (TRUE) {
 		/* if program name is supplied. */
 		if (argc <= 3) {
-			printf("Usage: add num1 num2.\n");
+			printf("Usage: <arithmetic operation> num1 num2.\n");
 			break;
 		}
 		m = 1;
@@ -36,7 +36,10 @@ int main(int argc, char **argv) {
 			}
 		}
 		else if (strcmp(argv[m], "sub") == 0) {
-			res = arbitrary_sub(atoi(argv[m+1]), atoi(argv[m+2]));
+			first_num = strtoul(argv[m+1], NULL, 10);
+			second_num = strtoul(argv[m+2], NULL, 10);
+
+			res = arbitrary_sub(first_num, second_num);
 			printf("sub: %lu\n", res);
 			break;
 		}
@@ -47,6 +50,13 @@ int main(int argc, char **argv) {
 			res = arbitrary_mul(first_num, second_num);
 			printf("mul: %lu\n", res);
 			break;
+		}
+		else if (strcmp(argv[m], "div") == 0) {
+			first_num = strtoul(argv[m+1], NULL, 10);
+			second_num = strtoul(argv[m+2], NULL, 10);
+
+			res = arbitrary_div(first_num, second_num);
+			printf("div: %lu\n", res);
 		}
 	}	
 	return (0);
