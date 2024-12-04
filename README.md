@@ -22,4 +22,5 @@ This program aims to perform basic maths operations without limits written in C 
   |    :---:     |    :---:     |
   | add (+)      | addition     |
   | sub (-)      | subtraction  |
-  | mul (*)     | multiplication |
+  | mul (\*)     | multiplication |
+  | mod (%)      | modulo       |
