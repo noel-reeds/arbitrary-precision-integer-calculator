@@ -15,7 +15,7 @@
 /*--- custom function defs ---*/
 int main(int argc, char **argv);
 char func_handler(char func_name);
-UL int arbitrary_add(unsigned long int num, unsigned long int num3);
+uint64_t arbitrary_add(uint64_t num, uint64_t num3);
 int arbitrary_sub(int num, int num3);
 
 #endif
