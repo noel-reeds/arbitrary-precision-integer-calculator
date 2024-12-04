@@ -5,7 +5,7 @@ This program aims to perform basic maths operations without limits written in C 
 - This is work in progress :(
 - The maximum supported value so far for any math operation is ULONG_MAX as defined in `stdint.h` and `limits.h` header.
 
-#### REQUIREMENTS:
+#### Requirements:
 - The program runs on C's compiler gcc or cc, so make sure you have it installed.
 - Also include [Make](https://www.gnu.org/software/make/) in your installations to easen compilations.
 
@@ -24,3 +24,21 @@ This program aims to perform basic maths operations without limits written in C 
   | sub (-)      | subtraction  |
   | mul (\*)     | multiplication |
   | mod (%)      | modulo       |
+  | div (/)      | division     |
+  | fact(!)      | factorial    |
+
+#### How To Carry Out Arithmetic Operations:
+Arithmetic Operations can be done as so:
+
+- Add two or more integers: `./calc add num1 num2, num3 ...`
+- Subtract two integers: `./calc sub num1 num2`
+- Multiply tow integers: `./calc mul num1 num2`
+- Modulo of integers: `./calc mod num1 num2`
+- Division as so: `./calc div num1 num2`
+
+
+
+#### Resources:
+- GNU man [pages](insert link)
+- GNU [Make](https://www.gnu.org/software/make/)
+- [REPL]() for C/C++ programmers
