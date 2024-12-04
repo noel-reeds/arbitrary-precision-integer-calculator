@@ -17,3 +17,10 @@ This program aims to perform basic maths operations without limits written in C 
   `./calc <math operation> <num1> <num2>`aaaaaand voila:)
 
 #### SUPPORTED MATH OPERATIONS:
+
+- |math operator | description |
+  |-----------------------------
+  |
+  |
+  |
+  |
