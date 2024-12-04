@@ -1,9 +1,11 @@
 # rules for arbitrary precision calculator
 #
-all: api-calc
+# include C-linter in rules
+
+all: calc
 
 cc := gcc
-cc_flags := -Werror -pedantic -Wextra -std=gnu89
+cc_flags := -g -Werror -pedantic -Wextra -std=gnu89
 
-api-calc: main.c add.c
+calc: main.c add.c sub.c mul.c
 	$(cc) $(cc_flags) $^ -o $@
