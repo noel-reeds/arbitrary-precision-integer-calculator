@@ -11,7 +11,7 @@
  */
 
 int main(int argc, char **argv) {
-	int m, res;
+	uint64_t m, res, first_num, second_num;
 
 	while (TRUE) {
 		/* if program name is supplied. */
@@ -24,8 +24,11 @@ int main(int argc, char **argv) {
 			/* check arguments to add func have been
 			* passed to the cmd */
 			if (argv[m+1] != NULL && argv[m+2] != NULL) {
-				res = arbitrary_add(atoi(argv[m+1]), atoi(argv[m+2]));
-				printf("sum: %d.\n", res);
+				first_num = strtoul(argv[m+1], NULL, 10);
+				second_num = strtoul(argv[m+2], NULL, 10);
+
+				res = arbitrary_add(first_num, second_num);
+				printf("sum: %lu\n", res);
 				break;
 			}
 			else {
@@ -34,7 +37,15 @@ int main(int argc, char **argv) {
 		}
 		else if (strcmp(argv[m], "sub") == 0) {
 			res = arbitrary_sub(atoi(argv[m+1]), atoi(argv[m+2]));
-			printf("sub: %d\n", res);
+			printf("sub: %lu\n", res);
+			break;
+		}
+		else if (strcmp(argv[m], "mul") == 0) {
+			first_num = strtoul(argv[m+1], NULL, 10);
+			second_num = strtoul(argv[m+2], NULL, 10);
+
+			res = arbitrary_mul(first_num, second_num);
+			printf("mul: %lu\n", res);
 			break;
 		}
 	}	
