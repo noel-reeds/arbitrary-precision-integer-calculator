@@ -7,6 +7,6 @@
  *
  * Return: returns a matching function if it exists.
  */
-char func-handler(char *func-name) {
-	return (0)
+char func_handler(char *func-name) {
+	return (0);
 }
