@@ -18,6 +18,8 @@ This program aims to perform basic maths operations without limits written in C 
 
 #### Supported Arithmetic Operations:
 
-- |math operator | description |
-  |    :---:     |    :---:    |
-  | *            | addition    |
+- |math operator | description  |
+  |    :---:     |    :---:     |
+  | add (+)      | addition     |
+  | sub (-)      | subtraction  |
+  | mul (`*)     | multiplication |
