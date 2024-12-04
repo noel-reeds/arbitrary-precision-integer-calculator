@@ -19,8 +19,4 @@ This program aims to perform basic maths operations without limits written in C 
 #### SUPPORTED MATH OPERATIONS:
 
 - |math operator | description |
-  |-----------------------------
-  |
-  |
-  |
-  |
+  | --- | --- |
