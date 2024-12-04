@@ -16,7 +16,8 @@ This program aims to perform basic maths operations without limits written in C 
 - To carry out a math operation run as such:
   `./calc <math operation> <num1> <num2>`aaaaaand voila:)
 
-#### SUPPORTED MATH OPERATIONS:
+#### Supported Arithmetic Operations:
 
 - |math operator | description |
-  | --- | --- |
+  |    :---:     |    :---:    |
+  | *            | addition    |
