@@ -6,17 +6,16 @@
  * Return: returns the sum of two integers..
  */
 uint64_t arbitrary_add(uint64_t argc, uint64_t *arr[]) {
-	int m;
-	uint64_t sum;
+	uint64_t m, sum;
 	
 	if (argc == 4) {
-		sum = num + num3;
+		sum = *arr[2] + *arr[3];
 		return sum;
 	}
 	else if (argc > 4) {
 		sum = 0;
 		for (m = 2; m < argc; m++) {
-			sum =+ argv[m];
+			sum = sum + *arr[m];
 		}
 		return sum;
 	}
