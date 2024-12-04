@@ -11,10 +11,11 @@
 #include <string.h>
 #include <stdbool.h>
 #include <stdint.h>
-
-/*--- custom function defs ---*/
+#include <limits.h>
 int main(int argc, char **argv);
+uint64_t arbitrary_mod(uint64_t num, uint64_t num3);
 char func_handler(char func_name);
+uint64_t arbitrary_div(uint64_t num, uint64_t num3);
 uint64_t arbitrary_add(uint64_t num, uint64_t num3);
 uint64_t arbitrary_sub(uint64_t num, uint64_t num3);
 uint64_t arbitrary_mul(uint64_t num, uint64_t num3);
