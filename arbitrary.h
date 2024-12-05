@@ -12,7 +12,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <limits.h>
-int main(int argc, char **argv);
+int main(int argc, char *argv[]);
 uint64_t arbitrary_mod(uint64_t num, uint64_t num3);
 char func_handler(char func_name);
 uint64_t arbitrary_div(uint64_t num, uint64_t num3);
