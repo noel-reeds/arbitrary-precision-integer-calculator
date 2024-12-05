@@ -13,7 +13,7 @@ uint64_t arbitrary_div(uint64_t num, uint64_t num3) {
 
 	if (num == 0) {
 		fprintf(stderr, "Zero Division Error!\n");
-		return;
+		return (-1);
 	}
 	else if (num3 == 0) {
 		res = 0;
