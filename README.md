@@ -32,7 +32,7 @@ Arithmetic Operations can be done as so:
 
 - Add two or more integers: `./calc add num1 num2, num3 ...`
 - Subtract two integers: `./calc sub num1 num2`
-- Multiply tow integers: `./calc mul num1 num2`
+- Multiply two or more integers: `./calc mul num1 num2 num3..`
 - Modulo of integers: `./calc mod num1 num2`
 - Division as so: `./calc div num1 num2`
 
