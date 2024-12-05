@@ -11,7 +11,7 @@
  */
 
 int main(int argc, char **argv) {
-	int n, m, num_arr;
+	int n, m;
 	uint64_t num, res, num3, *arr[argc - 2];
 
 	if (argc < 4) {
@@ -31,8 +31,7 @@ int main(int argc, char **argv) {
 			*arr[n] = strtoul(argv[m], NULL, 10);
 			n++;
 		}
-		num_arr = n + 1;
-		res = arbitrary_add(num_arr, arr);
+		res = arbitrary_add(n, arr);
 		printf("sum: %lu\n", res);
 	}
 	m = 2;
