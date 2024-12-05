@@ -8,9 +8,12 @@
  *
  * Return: result of multiplication.
  */
-uint64_t arbitrary_mul(uint64_t num, uint64_t num3) {
-	uint64_t res;
+uint64_t arbitrary_mul(int argc, uint64_t *arr[]) {
+	uint64_t res = 1;
+	int m;
 
-	res = num * num3;
+	for (m = 0; m < argc; m++) {
+		res = res * *arr[m];
+	}
 	return res;
 }

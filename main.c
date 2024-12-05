@@ -25,14 +25,25 @@ int main(int argc, char **argv) {
 		n = 0;
 		for (m = 2; m < argc; m++) {
 			arr[n] = malloc(sizeof(uint64_t));
-			if (arr[n] == NULL) {
+			if (arr[n] == NULL)
 				fprintf(stderr, "mem alloc failed");
-			}
 			*arr[n] = strtoul(argv[m], NULL, 10);
 			n++;
 		}
 		res = arbitrary_add(n, arr);
 		printf("sum: %lu\n", res);
+	}
+	else if (strcmp(argv[m], "mul") == 0) {
+		n = 0;
+		for (m = 2; m < argc; m++) {
+			arr[n] = malloc(sizeof(uint64_t));
+			if (arr[n] == NULL)
+				fprintf(stderr, "mem alloc failed.");
+			*arr[n] = strtoul(argv[m], NULL, 10);
+			n++;
+		}
+		res = arbitrary_mul(n, arr);
+		printf("mul: %lu\n", res);
 	}
 	m = 2;
 	num = strtoul(argv[m], NULL, 10);
@@ -41,10 +52,6 @@ int main(int argc, char **argv) {
 	if (strcmp(argv[m - 1], "sub") == 0) {
 		res = arbitrary_sub(num, num3);
 		printf("sub: %lu\n", res);
-	}
-	else if (strcmp(argv[m - 1], "mul") == 0) {
-		res = arbitrary_mul(num, num3);
-		printf("mul: %lu\n", res);
 	}
 	else if (strcmp(argv[m - 1], "div") == 0) {
 		res = arbitrary_div(num, num3);
