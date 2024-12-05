@@ -39,6 +39,6 @@ Arithmetic Operations can be done as so:
 
 
 #### Resources:
-- GNU man [pages](insert link)
+- GNU [man pages](https://www.gnu.org/)
 - GNU [Make](https://www.gnu.org/software/make/)
 - [REPL]() for C/C++ programmers
