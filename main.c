@@ -12,9 +12,9 @@
 
 int main(int argc, char **argv) {
 	int m = 1;
-	uint64_t num, res, num3, *arr[argc-2];
+	uint64_t num, res, num3, *arr[argc - 2];
 
-	if (argc <= 3) {
+	if (argc < 4) {
 		fprintf(stderr, "Usage: <arithmetic operation> num1 num2.\n");
 		return (0);
 	}
@@ -22,28 +22,33 @@ int main(int argc, char **argv) {
 		/* check arguments to add func have been
 		* passed to the cmd */
 		for (m = 2; m < argc; m++) {
-			res = 0;
+			arr[m] = malloc(sizeof(uint64_t));
+			if (arr[m] == NULL) {
+				fprintf(stderr, "mem alloc failed");
+			}
+			printf("argv[m]: %s and m: %d\n", argv[m], m);
 			*arr[m] = strtoul(argv[m], NULL, 10);
 		}
-		res = arbitrary_add(argc, *arr[]);
+		res = arbitrary_add(argc, arr);
 		printf("sum: %lu\n", res);
 	}
-	num = strtoul(argv[m + 1], NULL, 10);
-	num3 = strtoul(argv[m + 2], NULL, 10);
+	m = m + 1;
+	num = strtoul(argv[m], NULL, 10);
+	num3 = strtoul(argv[m + 1], NULL, 10);
 
-	if (strcmp(argv[m], "sub") == 0) {
+	if (strcmp(argv[m - 1], "sub") == 0) {
 		res = arbitrary_sub(num, num3);
 		printf("sub: %lu\n", res);
 	}
-	else if (strcmp(argv[m], "mul") == 0) {
+	else if (strcmp(argv[m - 1], "mul") == 0) {
 		res = arbitrary_mul(num, num3);
 		printf("mul: %lu\n", res);
 	}
-	else if (strcmp(argv[m], "div") == 0) {
+	else if (strcmp(argv[m - 1], "div") == 0) {
 		res = arbitrary_div(num, num3);
 		printf("div: %lu\n", res);
 	}
-	else if (strcmp(argv[m], "mod") == 0) {
+	else if (strcmp(argv[m - 1], "mod") == 0) {
 		res = arbitrary_mod(num, num3);
 		printf("modulo: %lu\n", res);
 	}
