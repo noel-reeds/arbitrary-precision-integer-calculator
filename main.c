@@ -11,24 +11,28 @@
  */
 
 int main(int argc, char **argv) {
-	int m;
-	uint64_t num, res, num3, *arr[argc];
+	int n, m, num_arr;
+	uint64_t num, res, num3, *arr[argc - 2];
 
 	if (argc < 4) {
 		fprintf(stderr, "Usage: <arithmetic operation> num1 num2.\n");
 		return (0);
 	}
+	m = 1;
 	if (strcmp(argv[m], "add") == 0) {
 		/* check arguments to add func have been
 		* passed to the cmd */
+		n = 0;
 		for (m = 2; m < argc; m++) {
-			arr[m] = malloc(sizeof(uint64_t));
-			if (arr[m] == NULL) {
+			arr[n] = malloc(sizeof(uint64_t));
+			if (arr[n] == NULL) {
 				fprintf(stderr, "mem alloc failed");
 			}
-			*arr[m] = strtoul(argv[m], NULL, 10);
+			*arr[n] = strtoul(argv[m], NULL, 10);
+			n++;
 		}
-		res = arbitrary_add(argc, arr);
+		num_arr = n + 1;
+		res = arbitrary_add(num_arr, arr);
 		printf("sum: %lu\n", res);
 	}
 	m = 2;
