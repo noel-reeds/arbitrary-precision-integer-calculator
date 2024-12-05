@@ -7,12 +7,12 @@
  *
  *@argv: arguments vector.
  *
- * Return: an integer from the integer operation.
+ * Return: an integer from the arithmetic operation.
  */
 
 int main(int argc, char **argv) {
-	int m = 1;
-	uint64_t num, res, num3, *arr[argc - 2];
+	int m;
+	uint64_t num, res, num3, *arr[argc];
 
 	if (argc < 4) {
 		fprintf(stderr, "Usage: <arithmetic operation> num1 num2.\n");
@@ -26,13 +26,12 @@ int main(int argc, char **argv) {
 			if (arr[m] == NULL) {
 				fprintf(stderr, "mem alloc failed");
 			}
-			printf("argv[m]: %s and m: %d\n", argv[m], m);
 			*arr[m] = strtoul(argv[m], NULL, 10);
 		}
 		res = arbitrary_add(argc, arr);
 		printf("sum: %lu\n", res);
 	}
-	m = m + 1;
+	m = 2;
 	num = strtoul(argv[m], NULL, 10);
 	num3 = strtoul(argv[m + 1], NULL, 10);
 
