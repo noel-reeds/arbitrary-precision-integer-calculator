@@ -13,9 +13,9 @@
 #include <stdint.h>
 #include <limits.h>
 int main(int argc, char *argv[]);
-uint64_t arbitrary_mod(uint64_t num, uint64_t num3);
+uint64_t arbitrary_mod(uint64_t num1, uint64_t num2);
 char func_handler(char func_name);
-uint64_t arbitrary_div(uint64_t num1, uint64_t num2);
+long double arbitrary_div(uint64_t num1, uint64_t num2);
 uint64_t arbitrary_add(int argc, uint64_t *arr[]);
 uint64_t arbitrary_sub(uint64_t num1, uint64_t num2);
 uint64_t arbitrary_mul(int argc, uint64_t *arr[]);
