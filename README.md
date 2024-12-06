@@ -41,4 +41,4 @@ Arithmetic Operations can be done as so:
 #### Resources:
 - GNU [man pages](https://www.gnu.org/)
 - GNU [Make](https://www.gnu.org/software/make/)
-- [REPL](https://codeberg.org/andybalaam/igcc) fos C/C++ programmers
+- [REPL](https://codeberg.org/andybalaam/igcc) for C/C++ programmers
