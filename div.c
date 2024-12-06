@@ -15,6 +15,9 @@ uint64_t arbitrary_div(uint64_t num1, uint64_t num2) {
 		fprintf(stderr, "Zero Division Error!\n");
 		exit(EXIT_FAILURE);
 	}
+	else if (num2 > num1) {
+		exit(1);
+	}
 	else {
 		res = num1 / num2;
 		return (res);
