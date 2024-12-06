@@ -19,5 +19,8 @@ uint64_t arbitrary_div(uint64_t num1, uint64_t num2);
 uint64_t arbitrary_add(int argc, uint64_t *arr[]);
 uint64_t arbitrary_sub(uint64_t num1, uint64_t num2);
 uint64_t arbitrary_mul(int argc, uint64_t *arr[]);
+uint64_t arbitrary_expo(uint64_t *arr[]);
+void arbitrary_free(void *arr[]);
+
 
 #endif
