@@ -8,19 +8,15 @@
  *
  *Return: result of division.
  */
-uint64_t arbitrary_div(uint64_t num, uint64_t num3) {
+uint64_t arbitrary_div(uint64_t num1, uint64_t num2) {
 	uint64_t res;
 
-	if (num == 0) {
+	if (num2 == 0) {
 		fprintf(stderr, "Zero Division Error!\n");
-		return (-1);
-	}
-	else if (num3 == 0) {
-		res = 0;
-		return (res);
+		exit(EXIT_FAILURE);
 	}
 	else {
-		res = num / num3;
+		res = num1 / num2;
 		return (res);
 	}
 	return (0);
