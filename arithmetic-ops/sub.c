@@ -8,9 +8,14 @@
  *
  * Return: returns the result of subtraction
  */
-uint64_t arbitrary_sub(uint64_t num1, uint64_t num2) {
+int64_t arbitrary_sub(uint64_t num1, uint64_t num2) {
 	uint64_t res;
-
+	int64_t _res;
+	
+	if (num2 > num1) {
+		_res = (int64_t)num1 - (int64_t)num2;
+		return _res;
+	}
 	res = num1 - num2;
 	return res;
 }
