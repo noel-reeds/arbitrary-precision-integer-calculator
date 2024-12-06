@@ -8,7 +8,7 @@
  *
  * Return: result of multiplication.
  */
-uint64_t arbitrary_mul(int argc, uint64_t *arr[]) {
+int64_t arbitrary_mul(int argc, uint64_t *arr[]) {
 	uint64_t res = 1;
 	int m;
 
