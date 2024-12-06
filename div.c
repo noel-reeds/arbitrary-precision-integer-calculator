@@ -11,9 +11,17 @@
 uint64_t arbitrary_div(uint64_t num1, uint64_t num2) {
 	uint64_t res;
 
-	if (num2 == 0) {
+	if (num1 == 0 && num2 == 0) {
+		printf("undefined\n");
+		exit(EXIT_FAILURE);
+	}
+	else if (num2 == 0) {
 		fprintf(stderr, "Zero Division Error!\n");
 		exit(EXIT_FAILURE);
+	}
+	else if (num1 == 0) {
+		res = 0;
+		return (res);
 	}
 	else if (num2 > num1) {
 		exit(1);
