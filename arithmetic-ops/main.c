@@ -13,6 +13,7 @@
 int main(int argc, char **argv) {
 	int n, i, m = 1;
 	uint64_t num1, num2, res, *arr[argc - 2];
+	long double float_res;
 
 	if (argc < 4) {
 		fprintf(stderr, "Usage: <arithmetic operation> num1 num2.\n");
@@ -53,8 +54,8 @@ int main(int argc, char **argv) {
 			printf("sub: %lu\n", res);
 		}
 		else if (strcmp(argv[m], "div") == 0) {
-			res = arbitrary_div(num1, num2);
-			printf("div: %lu\n", res);
+			float_res = arbitrary_div(num1, num2);
+			printf("div: %Lf\n", float_res);
 		}
 		else if (strcmp(argv[m], "mod") == 0) {
 			res = arbitrary_mod(num1, num2);
