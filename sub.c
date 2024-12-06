@@ -8,9 +8,10 @@
  *
  * Return: returns the result of subtraction
  */
-uint64_t arbitrary_sub(uint64_t num, uint64_t num3) {
+uint64_t arbitrary_sub(uint64_t num1, uint64_t num2) {
 	uint64_t res;
 
-	res = num - num3;
+	printf("num1: %lu, num2: %lu\n", num1, num2);
+	res = num1 - num2;
 	return res;
 }
