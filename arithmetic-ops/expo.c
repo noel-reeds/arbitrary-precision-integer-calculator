@@ -6,6 +6,6 @@
  *
  *Return: returns a factorial of integer on success.
  */
-uint64_t arbitrary_expo(uint64_t *arr[]) {
+int64_t arbitrary_expo(uint64_t *arr[]) {
 	exit(EXIT_SUCCESS);
 }
