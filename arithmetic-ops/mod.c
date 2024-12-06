@@ -6,9 +6,14 @@
  *
  * Return: returns modulo.
  */
-uint64_t arbitrary_mod(uint64_t num, uint64_t num3) {
+uint64_t arbitrary_mod(uint64_t num1, uint64_t num2) {
 	uint64_t mod;
 
-	mod = num % num3;
-	return mod;
+	if (num2 > num1) {
+		return (num1);
+	}
+	else {
+		mod = num1 % num2;
+		return mod;
+	}
 }
