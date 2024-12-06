@@ -3,9 +3,10 @@
 all: calc
 
 cc := gcc
+src := $(wildcard ./arithmetic-ops/*.c)
 cc_flags := -g -Werror -pedantic -Wextra -std=gnu99
 
-calc: div.c main.c mul.c sub.c add.c mod.c
+calc: $(src)
 	$(cc) $(cc_flags) $^ -o $@
 
 # include C-linter in rules
