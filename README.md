@@ -20,21 +20,22 @@ This program aims to perform basic maths operations without limits written in C 
 
 - |math operator | description  |
   |    :---:     |    :---:     |
-  | add (+)      | addition     |
-  | sub (-)      | subtraction  |
-  | mul (\*)     | multiplication |
-  | mod (%)      | modulo       |
-  | div (/)      | division     |
-  | fact(!)      | factorial    |
+  |  (+)         | addition     |
+  |  (-)         | subtraction  |
+  |  (\*)        | multiplication |
+  |  (%)         | modulo       |
+  |  (/)         | division     |
+  |  (!)         | factorial    |
 
 #### How To Carry Out Arithmetic Operations:
 Arithmetic Operations can be done as so:
 
-- Add two or more integers: `./calc add num1 num2, num3 ...`
-- Subtract two integers: `./calc sub num1 num2`
-- Multiply two or more integers: `./calc mul num1 num2 num3..`
-- Modulo of integers: `./calc mod num1 num2`
-- Division as so: `./calc div num1 num2`
+- Add two or more integers: `./calc add <num1> <num2>, <num3> ...`
+- Subtract two integers: `./calc sub <num1> <num2>`
+- Multiply two or more integers: `./calc mul <num1> <num2> <num3>..`
+- Modulo of integers: `./calc mod <num1> <num2>`
+- Division as so: `./calc div <num1> <num2>`
+- Factorial as so: `./calc fact <num>!`
 
 
 
