@@ -11,16 +11,20 @@
  */
 
 int main(int argc, char **argv) {
-	int n, i, m = 1;
+	int n, i = 2, m = 1;
 	uint64_t num1, num2, res, *arr[argc - 2];
 	long double float_res;
 	int64_t _res;
-
-	if (argc < 4) {
+	char *_str;
+	
+	if (argc == 3 && (strcmp(argv[m], "fact") == 0)) {
+		exit(EXIT_SUCCESS);
+	}
+	else if (argc < 4) {
 		fprintf(stderr, "Usage: <arithmetic operation> num1 num2.\n");
 		return (0);
 	}
-	if (strcmp(argv[m], "add") == 0) {
+	else if (strcmp(argv[m], "add") == 0) {
 		/* check arguments to add func have been
 		* passed to the cmd */
 		n = 0;
@@ -47,7 +51,6 @@ int main(int argc, char **argv) {
 		printf("mul: %lu\n", res);
 	}
 	else {
-		i = 2;
 		num1 = strtoul(argv[i], NULL, 10);
 		num2 = strtoul(argv[i + 1], NULL, 10);
 		if (strcmp(argv[m], "sub") == 0) {
