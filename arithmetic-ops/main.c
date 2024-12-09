@@ -18,21 +18,20 @@ int main(int argc, char **argv) {
 	uint64_t num1, num2, res, _num, *arr[argc - 2];
 	long double float_res;
 	int64_t _res;
-	char *_str, *f_num = "";
+	char *_str, *fnum;
 	
 	if (argc == 3 && (strcmp(argv[m], "fact") == 0)) {
 		_str = argv[m + 1];
+		fnum = argv[m + 1];
 		_strlen = strlen(_str);
-		printf("_strlen: %lu\n", _strlen);
+		printf("_str: %s\n", _str);
 		for (r = 0; r < _strlen; r++) {
 			/* f_num contains an int string that excludes ! */
-			printf("r: %lu ", r);
-			f_num[r] = _str[r];
+			fnum[r] = _str[r];
 		}
-		printf("f_num: %s\n", f_num);
-		_num = strtoul(f_num, NULL, 10);
-		printf("_num to perform fact-ops: %lu", _num);
-		exit(EXIT_SUCCESS);
+		_num = strtoul(fnum, NULL, 10);
+		res = arbitrary_fact(_num);
+		return (res);
 	}
 	else if (argc < 4) {
 		fprintf(stderr, "Usage: <arithmetic operation> num1 num2.\n");
