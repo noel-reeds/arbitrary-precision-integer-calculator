@@ -24,14 +24,13 @@ int main(int argc, char **argv) {
 		_str = argv[m + 1];
 		fnum = argv[m + 1];
 		_strlen = strlen(_str);
-		printf("_str: %s\n", _str);
 		for (r = 0; r < _strlen; r++) {
 			/* f_num contains an int string that excludes ! */
 			fnum[r] = _str[r];
 		}
 		_num = strtoul(fnum, NULL, 10);
 		res = arbitrary_fact(_num);
-		return (res);
+		printf("factorial of %lu: %lu\n", _num, res);
 	}
 	else if (argc < 4) {
 		fprintf(stderr, "Usage: <arithmetic operation> num1 num2.\n");
