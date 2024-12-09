@@ -21,6 +21,7 @@ int64_t arbitrary_sub(uint64_t num1, uint64_t num2);
 int64_t arbitrary_mul(int argc, uint64_t *arr[]);
 int64_t arbitrary_expo(uint64_t *arr[]);
 void arbitrary_free(void *arr[]);
+uint64_t arbitrary_fact(uint64_t _num);
 
 
 #endif
