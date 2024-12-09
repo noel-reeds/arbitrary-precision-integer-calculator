@@ -26,6 +26,7 @@ This program aims to perform basic maths operations without limits written in C 
   |  (%)         | modulo       |
   |  (/)         | division     |
   |  (!)         | factorial    |
+  |  (e**x)      | exponential  |
 
 #### How To Carry Out Arithmetic Operations:
 Arithmetic Operations can be done as so:
