@@ -1,4 +1,6 @@
 #include "../arbitrary.h"
+#include <strings.h>
+#include <stddef.h>
 
 /**
  * main - entry point of our api-calculator.
@@ -11,13 +13,25 @@
  */
 
 int main(int argc, char **argv) {
+	size_t r, _strlen;
 	int n, i = 2, m = 1;
-	uint64_t num1, num2, res, *arr[argc - 2];
+	uint64_t num1, num2, res, _num, *arr[argc - 2];
 	long double float_res;
 	int64_t _res;
-	char *_str;
+	char *_str, *f_num = "";
 	
 	if (argc == 3 && (strcmp(argv[m], "fact") == 0)) {
+		_str = argv[m + 1];
+		_strlen = strlen(_str);
+		printf("_strlen: %lu\n", _strlen);
+		for (r = 0; r < _strlen; r++) {
+			/* f_num contains an int string that excludes ! */
+			printf("r: %lu ", r);
+			f_num[r] = _str[r];
+		}
+		printf("f_num: %s\n", f_num);
+		_num = strtoul(f_num, NULL, 10);
+		printf("_num to perform fact-ops: %lu", _num);
 		exit(EXIT_SUCCESS);
 	}
 	else if (argc < 4) {
