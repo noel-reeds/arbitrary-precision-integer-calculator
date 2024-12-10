@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
 	long double float_res;
 	int64_t _res;
 	char *_str, *fnum;
-	
+
 	if (argc == 3 && (strcmp(argv[m], "fact") == 0)) {
 		_str = argv[m + 1];
 		fnum = argv[m + 1];
@@ -35,6 +35,11 @@ int main(int argc, char **argv) {
 	else if (argc < 4) {
 		fprintf(stderr, "Usage: <arithmetic operation> num1 num2.\n");
 		return (0);
+	}
+	else if (strcmp(argv[m], "expo") == 0 && strcmp(argv[m + 1], "**") == 0) {
+		_num = strtoul(argv[m + 2], NULL, 10);
+		float_res = arbitrary_exp(_num);
+		printf("expo of %lu : %Lf\n", _num, float_res);
 	}
 	else if (strcmp(argv[m], "add") == 0) {
 		/* check arguments to add func have been
