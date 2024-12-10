@@ -37,6 +37,7 @@ Arithmetic Operations can be done as so:
 - Modulo of integers: `./calc mod <num1> <num2>`
 - Division as so: `./calc div <num1> <num2>`
 - Factorial as so: `./calc fact <num>!`
+- Exponentiation as so: `./calc expo "**" <num>`
 
 
 
