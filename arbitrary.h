@@ -3,7 +3,7 @@
 
 #define FALSE 0
 #define TRUE 1
-#define LDBL_EXP 2.71828
+#define LDBL_EXP 2.7182818284590452353602874713527
 
 #define ULL unsigned long long
 
