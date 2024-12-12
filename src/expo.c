@@ -1,10 +1,10 @@
 #include "../arbitrary.h"
 /**
- * arbitrary_expo - computes factorial of an integer.
+ * arbitrary_expo - computes exponential of an integer.
  *
- *@arr: ptr array of integer to compute.
+ *@_num: integer to compute.
  *
- *Return: returns a factorial of integer on success.
+ *Return: returns a exponential of integer on success.
  */
 long double arbitrary_exp(uint64_t _num) {
 	long double _res = 1;
